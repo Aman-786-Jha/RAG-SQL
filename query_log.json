@@ -10,5 +10,9 @@
     {
         "user_input": "who are the customers who don't have any employee handle",
         "generated_sql": "SELECT DISTINCT customer_name\nFROM orders\nEXCEPT\nSELECT DISTINCT customer_name\nFROM orders\nWHERE employee_id IS NOT NULL;"
+    },
+    {
+        "user_input": "show departments",
+        "generated_sql": "SELECT id, name FROM departments;"
     }
 ]
