@@ -1,0 +1,14 @@
+[
+    {
+        "user_input": "show all the department",
+        "generated_sql": "SELECT id, name\nFROM departments;"
+    },
+    {
+        "user_input": "who are the employees who have salary greater than 100000",
+        "generated_sql": "SELECT id, name, salary\nFROM employees\nWHERE salary > 100000;"
+    },
+    {
+        "user_input": "who are the customers who don't have any employee handle",
+        "generated_sql": "SELECT DISTINCT customer_name\nFROM orders\nEXCEPT\nSELECT DISTINCT customer_name\nFROM orders\nWHERE employee_id IS NOT NULL;"
+    }
+]
